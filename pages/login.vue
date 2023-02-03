@@ -10,7 +10,7 @@
         <label for="email" class="custom-label">Password</label>
         <input type="password" class="custom-input" />
       </div>
-      <button class="custom-btn--md mt-8">Sign In</button>
+      <button class="custom-btn--lg mt-8">Sign In</button>
       <p class="custom-paragraph mt-2">
         New to BookILand ?
         <nuxt-link to="/register" class="underline text-xs"

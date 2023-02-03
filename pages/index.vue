@@ -1,4 +1,7 @@
 <template>
+  <section class="min-h-[100vh] pt-[250px]">
+    <ui-the-intro></ui-the-intro>
+  </section>
   <section
     class="flex flex-col items-center gap-10 text-center py-32 min-h-[100vh]"
   >

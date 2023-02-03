@@ -7,7 +7,7 @@
         <nuxt-link to="/" class="text-7xl font-bold p-5">B</nuxt-link>
       </div>
       <div class="flex gap-2 -mt-2">
-        <nuxt-link to="/register" class="custom-btn--small text-xs"
+        <nuxt-link to="/register" class="custom-btn--md text-xs"
           >Join BookILand
         </nuxt-link>
         <nuxt-link to="/login" class="custom-btn--small text-xs"
@@ -17,7 +17,7 @@
     </nav>
   </header>
   <main class="bg-white min-h-[90vh]">
-    <div class="container mx-auto sm:max-w-7xl py-2 px-5 sm:px-5 pb-20 sm:py-0">
+    <div class="container mx-auto sm:max-w-7xl py-2 px-5 sm:px-5 pb-20 sm:py-6">
       <slot></slot>
     </div>
   </main>

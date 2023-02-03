@@ -6,7 +6,9 @@
       <div class="text-3xl font-bold text-green">
         <nuxt-link to="/">BookILand</nuxt-link>
       </div>
-      <nuxt-link to="/login" class="custom-btn--small">Sign In </nuxt-link>
+      <nuxt-link to="/login" class="custom-btn--small sm:custom-btn--md"
+        >Sign In
+      </nuxt-link>
     </nav>
   </header>
 </template>
