@@ -1,6 +1,45 @@
 <template>
-  <section class="min-h-[100vh] pt-[250px]">
-    <ui-the-intro></ui-the-intro>
+  <section
+    ref="container"
+    class="w-full sm:w-4/5 mx-auto flex justify-between sm:gap-2 pt-72 md:pt-64 min-h-[100vh]"
+    :class="!displayContent && 'hide'"
+  >
+    <span
+      class="logo-letter text-5xl sm:text-7xl lg:text-[7.5rem] font-bold text-green"
+      >B</span
+    >
+    <span
+      class="logo-letter text-5xl sm:text-7xl lg:text-[7.5rem] font-bold text-green"
+      >O</span
+    >
+    <span
+      class="logo-letter text-5xl sm:text-7xl lg:text-[7.5rem] font-bold text-green"
+      >O</span
+    >
+    <span
+      class="logo-letter text-5xl sm:text-7xl lg:text-[7.5rem] font-bold text-green"
+      >K</span
+    >
+    <span
+      class="logo-letter text-5xl sm:text-7xl lg:text-[7.5rem] font-bold text-green"
+      >I</span
+    >
+    <span
+      class="logo-letter text-5xl sm:text-7xl lg:text-[7.5rem] font-bold text-green"
+      >L</span
+    >
+    <span
+      class="logo-letter text-5xl sm:text-7xl lg:text-[7.5rem] font-bold text-green"
+      >A</span
+    >
+    <span
+      class="logo-letter text-5xl sm:text-7xl lg:text-[7.5rem] font-bold text-green"
+      >N</span
+    >
+    <span
+      class="logo-letter text-5xl sm:text-7xl lg:text-[7.5rem] font-bold text-green"
+      >D</span
+    >
   </section>
   <section
     class="flex flex-col items-center gap-10 text-center py-32 min-h-[100vh]"
@@ -8,7 +47,7 @@
     <span class="text-[12px] tracking-wider font-bold text-white"
       >Welcome to BookILand</span
     >
-    <h1 class="heading-h1">Unlimited movies, TV shows, and more.</h1>
+    <h1 class="heading-h1">Unlimited books, novels, and more.</h1>
     <h2 class="text-[13px] leading-[25px] text-white mt-3">
       Ready to watch? Enter your email to create or restart your membership.
     </h2>
@@ -84,6 +123,47 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, onMounted } from "vue";
+import { gsap } from "gsap";
+// import { soundEffect } from "../assets/sound/Bookilandsound.mp3";
 
-<style scoped></style>
+const container = ref(null);
+const displayContent = ref(true);
+
+// let audio = new Audio(soundEffect);
+
+onMounted(() => {
+  gsap.from(container.value, {
+    duration: "4",
+    y: "-80%",
+    ease: "bounce",
+  });
+
+  setTimeout(() => {
+    displayContent.value = false;
+  }, 10000);
+});
+</script>
+
+<style scoped>
+.logo-letter {
+  filter: drop-shadow(0px 50px 70px #01bf71);
+}
+
+@keyframes slideaway {
+  from {
+    display: block;
+  }
+  to {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+}
+
+.hide {
+  transition: opacity 200ms, display 200ms;
+  display: none;
+  opacity: 0;
+}
+</style>
