@@ -1,5 +1,5 @@
 <template>
-  <section class="text-white mt-20">
+  <section class="text-white mt-32">
     <form class="sm:w-1/2 mx-auto flex flex-col gap-5">
       <h1 class="heading-h1 text-white">Sign In</h1>
       <div class="input-group">

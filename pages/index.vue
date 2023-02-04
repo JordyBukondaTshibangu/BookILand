@@ -1,7 +1,7 @@
 <template>
   <section
     ref="container"
-    class="w-full sm:w-4/5 mx-auto flex justify-between sm:gap-2 pt-72 md:pt-64 min-h-[100vh]"
+    class="w-full sm:w-4/5 mx-auto flex justify-between sm:gap-2 pt-96 md:pt-64 min-h-[100vh]"
     :class="!displayContent && 'hide'"
   >
     <span
@@ -42,7 +42,8 @@
     >
   </section>
   <section
-    class="flex flex-col items-center gap-10 text-center py-32 min-h-[100vh]"
+    ref="homeContainer"
+    class="flex flex-col items-center gap-10 text-center py-48 min-h-[100vh]"
   >
     <span class="text-[12px] tracking-wider font-bold text-white"
       >Welcome to BookILand</span
@@ -126,12 +127,10 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { gsap } from "gsap";
-// import { soundEffect } from "../assets/sound/Bookilandsound.mp3";
 
 const container = ref(null);
 const displayContent = ref(true);
-
-// let audio = new Audio(soundEffect);
+const homeContainer = ref(null);
 
 onMounted(() => {
   gsap.from(container.value, {
@@ -141,16 +140,18 @@ onMounted(() => {
   });
 
   setTimeout(() => {
-    displayContent.value = false;
-  }, 10000);
+    homeContainer.value?.scrollIntoView({ behavior: "smooth" });
+  }, 5000);
 });
+setTimeout(() => {
+  displayContent.value = false;
+}, 6000);
 </script>
 
 <style scoped>
 .logo-letter {
   filter: drop-shadow(0px 50px 70px #01bf71);
 }
-
 @keyframes slideaway {
   from {
     display: block;
@@ -160,7 +161,6 @@ onMounted(() => {
     opacity: 0;
   }
 }
-
 .hide {
   transition: opacity 200ms, display 200ms;
   display: none;
