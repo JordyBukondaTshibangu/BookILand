@@ -1,5 +1,5 @@
 <template>
-  <section class="text-white mt-32">
+  <section class="text-white pt-20">
     <form class="sm:w-1/2 mx-auto flex flex-col gap-5">
       <div v-show="currentIndex === 1" class="flex flex-col gap-5">
         <h1 class="heading-h1 text-white">Sign up</h1>
@@ -63,6 +63,9 @@
             <span class="font-semilbold">R80</span>
           </div>
         </div>
+        <div class="border-t-2 border-green">
+          <button class="custom-btn--lg mt-8">Proceed</button>
+        </div>
       </div>
     </form>
   </section>
@@ -71,7 +74,7 @@
 <script setup>
 import { ref } from "vue";
 
-const currentIndex = ref(2);
+const currentIndex = ref(1);
 const planIndex = ref(1);
 
 const choosePlan = (planName) => {

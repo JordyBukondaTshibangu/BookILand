@@ -16,12 +16,16 @@
       necessitatibus odio? Quisquam quo quia numquam nulla libero laboriosam,
       doloremque repudiandae voluptatum eum nulla sunt voluptate quos? Placeat
     </p>
-    <div class="flex gap-1">
-      <button class="w-1/2 custom-btn--md flex justify-center items-center">
+    <div class="flex gap-4">
+      <button
+        class="w-[120px] py-4 custom-btn--small flex justify-center items-center"
+      >
         <span>Email us</span>
         <i class="material-icons ml-3 text-[17px]">send</i>
       </button>
-      <button class="w-1/2 custom-btn--md flex justify-center items-center">
+      <button
+        class="w-[150px] py-4 custom-btn--small flex justify-center items-center"
+      >
         <span>Give us a call</span>
         <i class="material-icons ml-3 text-[17px]">call</i>
       </button>

@@ -40,6 +40,9 @@ body {
   .card {
     @apply p-5 rounded-md bg-white shadow-md h-full;
   }
+  .custom-movie-card {
+    @apply min-w-fit h-[280px] rounded-sm border-2 border-green;
+  }
   .custom-img-container {
     @apply w-full h-[270px] sm:h-auto lg:h-[540px] lg:w-[500px] lg:rounded-full object-cover rounded-sm;
   }
