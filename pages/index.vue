@@ -1,7 +1,7 @@
 <template>
   <section
     ref="container"
-    class="w-full sm:w-4/5 mx-auto flex justify-between sm:gap-2 pt-96 md:pt-64 min-h-[100vh]"
+    class="w-full sm:w-3/5 mx-auto flex justify-between sm:gap-1 pt-96 md:pt-64 min-h-[100vh]"
     :class="!displayContent && 'hide'"
   >
     <span
@@ -64,7 +64,9 @@
       >you can now read anytime and anywhere.</span
     >
   </section>
-  <section class="flex flex-col sm:flex-row gap-36 sm:flex-wrap mb-20">
+  <section
+    class="max-w-7xl container mx-auto flex flex-col sm:flex-row gap-36 sm:flex-wrap mb-20"
+  >
     <div
       class="flex flex-col sm:flex-row gap-8 justify-between items-center px-10"
     >

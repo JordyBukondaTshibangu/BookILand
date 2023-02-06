@@ -1,6 +1,6 @@
 <template>
   <section class="text-white pt-20">
-    <form class="sm:w-1/2 mx-auto flex flex-col gap-5">
+    <form class="sm:w-2/5 mx-auto flex flex-col gap-5">
       <div v-show="currentIndex === 1" class="flex flex-col gap-5">
         <h1 class="heading-h1 text-white">Sign up</h1>
         <p class="heading-2">Create a password to start your membership</p>
@@ -13,7 +13,9 @@
           <label for="email" class="custom-label">Password</label>
           <input type="password" class="custom-input" />
         </div>
-        <button class="custom-btn--lg mt-8">Next</button>
+        <button class="custom-btn--lg mt-8" @click="handleNextStep">
+          Next
+        </button>
         <p class="custom-paragraph mt-2">
           Already a BookILandLord ?
           <nuxt-link to="/login" class="underline text-xs">Sign In</nuxt-link>
@@ -63,7 +65,7 @@
             <span class="font-semilbold">R80</span>
           </div>
         </div>
-        <div class="border-t-2 border-green">
+        <div class="">
           <button class="custom-btn--lg mt-8">Proceed</button>
         </div>
       </div>
@@ -76,6 +78,10 @@ import { ref } from "vue";
 
 const currentIndex = ref(1);
 const planIndex = ref(1);
+
+const handleNextStep = () => {
+  currentIndex.value += 1;
+};
 
 const choosePlan = (planName) => {
   if (planName === "basic") {

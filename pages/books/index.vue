@@ -1,5 +1,5 @@
 <template>
-  <section class="movie-cover relative z-1 pt-5 bg-yellow min-h-[50vh]">
+  <section class="movie-cover relative z-1 pt-5 min-h-[80vh]">
     <div class="flex items-center gap-5 bg-green p-2 rounded-sm">
       <span class="text-white text-sm">Filter</span>
       <i class="material-icons mr-1 text-[14px] text-white">arrow_back</i>
@@ -30,7 +30,7 @@ const books = ref(bookList);
 
 <style scoped>
 .movie-cover {
-  background-image: url("../../assets/images/image-three.jpg");
+  background-image: url("../../assets/images/image-bg.jpg");
   object-fit: cover;
 }
 .custom-movie-card {
