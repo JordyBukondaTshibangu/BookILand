@@ -1,9 +1,9 @@
 <template>
-  <section class="movie-cover relative z-1 pt-5 min-h-[80vh]">
-    <div class="flex items-center gap-5 bg-green p-2 rounded-sm">
+  <section class="movie-cover relative z-1 min-h-[80vh]">
+    <!-- <div class="flex items-center gap-5 bg-green p-2 rounded-sm">
       <span class="text-white text-sm">Filter</span>
       <i class="material-icons mr-1 text-[14px] text-white">arrow_back</i>
-    </div>
+    </div> -->
   </section>
   <section
     class="relative z-3 w-11/12 -translate-y-32 mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 pb-32"

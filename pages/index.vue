@@ -1,7 +1,7 @@
 <template>
   <section
     ref="container"
-    class="w-full sm:w-3/5 mx-auto flex justify-between sm:gap-1 pt-96 md:pt-64 min-h-[100vh]"
+    class="w-full sm:w-3/5 mx-auto flex justify-between sm:gap-1 pt-96 md:pt-72 min-h-[100vh]"
     :class="!displayContent && 'hide'"
   >
     <span

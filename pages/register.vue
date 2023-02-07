@@ -1,5 +1,5 @@
 <template>
-  <section class="text-white pt-20">
+  <section class="text-white pt-32 sm:pt-40">
     <form class="sm:w-2/5 mx-auto flex flex-col gap-5">
       <div v-show="currentIndex === 1" class="flex flex-col gap-5">
         <h1 class="heading-h1 text-white">Sign up</h1>
