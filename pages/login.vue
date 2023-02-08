@@ -1,6 +1,6 @@
 <template>
   <section class="text-white pt-32 sm:pt-40">
-    <form class="sm:w-2/5 mx-auto flex flex-col gap-5">
+    <form class="sm:w-3/4 lg:w-2/5 mx-auto flex flex-col gap-5">
       <h1 class="heading-h1 text-white">Sign In</h1>
       <div class="input-group">
         <label for="email" class="custom-label">Email</label>
