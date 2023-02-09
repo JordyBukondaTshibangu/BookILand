@@ -1,24 +1,33 @@
 <template>
   <section class="movie-cover relative z-1 min-h-[80vh]">
-    <!-- <div class="flex items-center gap-5 bg-green p-2 rounded-sm">
+    <div class="flex items-center gap-5 bg-green p-2 rounded-sm mt-10">
       <span class="text-white text-sm">Filter</span>
       <i class="material-icons mr-1 text-[14px] text-white">arrow_back</i>
-    </div> -->
+    </div>
   </section>
   <section
     class="relative z-3 w-11/12 -translate-y-32 mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 pb-32"
   >
     <div
       v-for="(book, index) in books"
-      key="index"
+      :key="index"
       class="custom-movie-card flex flex-col p-3"
     >
       <span class="logo-letter text-2xl font-bold text-green">B</span>
       <div class="mt-auto">
         <h1 class="text-white text-xl font-bold">{{ book.title }}</h1>
       </div>
+      <button class="custom-btn--md" @click="handlePreview(index)">
+        Preview Book
+      </button>
     </div>
   </section>
+
+  <ModalsBookModal
+    v-show="previewBook"
+    :closePreview="closePreview"
+    :book="book"
+  ></ModalsBookModal>
 </template>
 
 <script setup>
@@ -26,6 +35,14 @@ import bookList from "../../data";
 import { ref } from "vue";
 
 const books = ref(bookList);
+const previewBook = ref(null);
+
+const handlePreview = (index) => {
+  previewBook.value = true;
+};
+const closePreview = () => {
+  previewBook.value = false;
+};
 </script>
 
 <style scoped>
