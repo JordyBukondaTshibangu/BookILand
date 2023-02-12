@@ -1,6 +1,12 @@
 <template>
-  <div class="overlay absolute top-32 left-0 right-0 bottom-0">
-    <div class="relative w-1/3 mx-auto h-[700px] bg-black z-2">
+  <div class="overview-overlay" @click="$emit('close')">
+    <div
+      class="relative w-1/3 mx-auto h-[85vh] bg-black border-green border-2 text-white"
+    >
+      <button
+        @click="$emit('close')"
+        class="rounded-full w-[14px] h-[14px] bg-white"
+      ></button>
       <h1>Hello Header</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
@@ -9,7 +15,6 @@
         necessitatibus ut illo! Pariatur voluptatibus aut atque sed aperiam
         temporibus nam repudiandae odio est?
       </p>
-      <button @click="handleCloseModal">Close</button>
     </div>
   </div>
 </template>
@@ -17,11 +22,22 @@
 <script setup>
 import { defineEmits } from "vue";
 
-const handleCloseModal = () => {};
+defineEmits("close");
 </script>
 
 <style scoped>
-.overlay {
-  background-color: rgba(41, 39, 39, 0.15);
+.overview-overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0 0.1);
+  top: 50px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
 }
 </style>

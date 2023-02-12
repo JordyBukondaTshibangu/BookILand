@@ -23,11 +23,13 @@
     </div>
   </section>
 
-  <ModalsBookModal
-    v-show="previewBook"
-    :closePreview="closePreview"
-    :book="book"
-  ></ModalsBookModal>
+  <teleport to="body">
+    <ModalsBookModal
+      v-show="previewBook"
+      @close="closePreview"
+      :book="book"
+    ></ModalsBookModal>
+  </teleport>
 </template>
 
 <script setup>
