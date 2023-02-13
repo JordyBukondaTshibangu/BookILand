@@ -19,14 +19,20 @@ body {
   .custom-paragraph {
     @apply text-sm text-white font-normal leading-7;
   }
+  .custom-paragraph--small {
+    @apply text-xs text-white font-normal leading-7;
+  }
+  .custom-paragraph--big {
+    @apply text-sm sm:text-[20px] text-white font-normal leading-7;
+  }
   .custom-btn--small {
-    @apply w-[90px] bg-[#12b488] px-3 py-2 rounded-md text-sm text-white flex items-center justify-center;
+    @apply w-[90px] bg-[#12b488] px-3 py-2 rounded-md text-xs sm:text-sm text-white flex items-center justify-center;
   }
   .custom-btn--md {
-    @apply w-[120px] bg-[#12b488] px-3 py-2 rounded-md text-sm text-white h-[45px] flex items-center justify-center;
+    @apply w-[120px] bg-[#12b488] px-3 py-2 rounded-md text-xs sm:text-sm text-white h-[45px] flex items-center justify-center;
   }
   .custom-btn--lg {
-    @apply w-[250px] bg-[#12b488] px-3 py-2 rounded-md text-sm text-white h-[45px] flex items-center justify-center;
+    @apply w-[250px] bg-[#12b488] px-3 py-2 rounded-md text-xs sm:text-sm text-white h-[45px] flex items-center justify-center;
   }
   .input-group {
     @apply relative sm:w-3/4 flex flex-col mt-5 bg-white text-black px-5 py-2;
@@ -41,7 +47,7 @@ body {
     @apply p-5 rounded-md bg-white shadow-md h-full;
   }
   .custom-movie-card {
-    @apply min-w-fit h-[280px] rounded-sm border-2 border-green;
+    @apply lg:min-w-fit h-[400px] rounded-sm border-2 border-green;
   }
   .custom-img-container {
     @apply w-full h-[270px] sm:h-auto lg:h-[540px] lg:w-[500px] lg:rounded-full object-cover rounded-sm;
