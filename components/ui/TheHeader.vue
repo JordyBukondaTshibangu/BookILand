@@ -18,7 +18,7 @@
           <nuxt-link to="/about">About</nuxt-link>
         </li>
         <li class="text-sm font-bold leading-7">
-          <nuxt-link to="/contact-us">Contact Us</nuxt-link>
+          <nuxt-link to="/contact-us">Contact us</nuxt-link>
         </li>
         <li class="text-sm font-bold leading-7">
           <nuxt-link to="/">Settings</nuxt-link>
@@ -50,4 +50,4 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

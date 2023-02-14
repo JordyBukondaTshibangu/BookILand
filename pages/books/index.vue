@@ -1,7 +1,7 @@
 <template>
   <section class="movie-cover relative z-1 min-h-[80vh] flex items-center">
     <div
-      class="w-full lg:w-1/3 flex flex-col gap-5 sm:gap-10 px-5 sm:px-10 lg:px-20"
+      class="w-full lg:w-1/2 xl:w-1/3 flex flex-col gap-5 sm:gap-10 px-5 sm:px-10 lg:px-20"
     >
       <div class="flex items-center gap-3">
         <span class="logo-letter text-3xl sm:text-6xl font-bold text-green"
@@ -27,12 +27,12 @@
     </div>
   </section>
   <section
-    class="w-11/12 -translate-y-20 mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-y-10 sm:gap-x-5 pb-32"
+    class="w-11/12 -translate-y-20 mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 sm:gap-y-10 sm:gap-x-5 pb-32"
   >
     <div
       v-for="(book, index) in books"
       :key="index"
-      class="custom-movie-card flex flex-col"
+      class="custom-movie-card relative flex flex-col"
       @click="handlePreview(index)"
     >
       <div class="h-full w-full">
@@ -115,14 +115,13 @@ const closePreview = () => {
   transition: ease-in-out 0.4s;
   transform: scale(1.18);
 }
-.logo-letter-card {
+.logo-letter {
   filter: drop-shadow(0px 50px 70px #01bf71);
 }
 .logo-letter-card {
   position: absolute;
   top: 5px;
   left: 5px;
-  z-index: 5;
   filter: drop-shadow(0px 50px 70px #01bf71);
 }
 </style>
