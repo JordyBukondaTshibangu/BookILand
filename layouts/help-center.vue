@@ -15,7 +15,7 @@
     </nav>
   </header>
   <main class="bg-white min-h-[90vh]">
-    <div class="sm:max-w-7xl py-2 px-5 sm:px-5 pb-20 sm:py-6">
+    <div class="sm:max-w-7xl mx-auto py-2 px-5 sm:px-5 pb-20 sm:py-6">
       <slot></slot>
     </div>
   </main>

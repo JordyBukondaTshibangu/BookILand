@@ -15,7 +15,7 @@
           <nuxt-link to="/">Home</nuxt-link>
         </li>
         <li class="text-sm font-bold leading-7">
-          <nuxt-link to="/about">About</nuxt-link>
+          <nuxt-link to="/about-us">About</nuxt-link>
         </li>
         <li class="text-sm font-bold leading-7">
           <nuxt-link to="/contact-us">Contact us</nuxt-link>

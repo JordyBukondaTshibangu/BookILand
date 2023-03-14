@@ -113,7 +113,8 @@ const closePreview = () => {
 }
 .custom-movie-card:hover {
   transition: ease-in-out 0.4s;
-  transform: scale(1.18);
+  transform: scale(1.15);
+  z-index: 25;
 }
 .logo-letter {
   filter: drop-shadow(0px 50px 70px #01bf71);
