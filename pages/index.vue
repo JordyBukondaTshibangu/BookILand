@@ -43,7 +43,7 @@
   </section>
   <section
     ref="homeContainer"
-    class="flex flex-col items-center gap-10 text-center py-48 min-h-[100vh]"
+    class="flex flex-col items-center gap-10 text-center py-56 min-h-[100vh]"
   >
     <span class="text-[12px] tracking-wider font-bold text-white"
       >Welcome to BookILand</span
@@ -127,7 +127,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
 import { gsap } from "gsap";
 
 const container = ref(null);
@@ -143,7 +142,7 @@ onMounted(() => {
 
   setTimeout(() => {
     homeContainer.value?.scrollIntoView({ behavior: "smooth" });
-  }, 5000);
+  }, 10000);
 });
 setTimeout(() => {
   displayContent.value = false;

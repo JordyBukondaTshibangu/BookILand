@@ -27,7 +27,7 @@
     </div>
   </section>
   <section
-    class="w-11/12 -translate-y-20 mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 sm:gap-y-10 sm:gap-x-5 pb-32"
+    class="w-11/12 -translate-y-32 mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 sm:gap-y-10 sm:gap-x-5 pb-32"
   >
     <div
       v-for="(book, index) in books"
