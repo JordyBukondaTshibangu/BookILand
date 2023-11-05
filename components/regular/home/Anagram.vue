@@ -45,6 +45,19 @@
 <script setup>
 import { gsap } from "gsap";
 
+// const audio = new Audio(require("~/assets/sound/Bookilandsound.mp3"));
+
+const play = (frequency = 300, duration = 1e3) => {
+  const context = new AudioContext();
+  const gainNode = context.createGain();
+  const oscillator = context.createOscillator();
+  oscillator.frequency.value = frequency;
+  oscillator.connect(gainNode);
+  gainNode.connect(context.destination);
+  oscillator.start(0);
+  setTimeout(() => oscillator.stop(), duration);
+};
+
 const container = ref(null);
 const displayContent = ref(true);
 const homeContainer = ref(null);
@@ -55,6 +68,12 @@ onMounted(() => {
     y: "-80%",
     ease: "bounce",
   });
+
+  // audio.play();
+  // play(800, 1e3);
+  // if (!res.data.success) {
+  //   throw new Error(res.data.message);
+  // }
 
   setTimeout(() => {
     homeContainer.value?.scrollIntoView({ behavior: "smooth" });

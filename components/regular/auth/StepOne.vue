@@ -1,5 +1,5 @@
 <template>
-  <v-form @submit.prevent class="flex flex-col gap-5">
+  <v-form @submit.prevent class="flex flex-col gap-8">
     <h1 class="heading-h1 text-white">Sign up</h1>
     <p class="heading-2">Create a password to start your membership</p>
     <span class="uppercase text-xs p-1">Step 1 of 2 </span>
@@ -24,12 +24,15 @@
         label="Confirm password"
       ></v-text-field>
     </div>
-    <v-btn class="!bg-[#12b488] !text-white mt-8" @click="handleNextStep">
+    <v-btn
+      class="!bg-[#12b488] !text-white mt-8 !h-[45px]"
+      @click="handleNextStep"
+    >
       Next
     </v-btn>
-    <p class="custom-paragraph mt-2">
+    <p class="text-sm mt-2">
       Already a BookILandLord ?
-      <nuxt-link to="/login" class="underline text-xs">Sign In</nuxt-link>
+      <nuxt-link to="/login" class="underline text-sm">Sign In</nuxt-link>
     </p>
   </v-form>
 </template>

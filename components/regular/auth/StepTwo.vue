@@ -1,19 +1,25 @@
 <template>
-  <div class="flex flex-col gap-5">
+  <div class="flex flex-col gap-8">
     <h1 class="heading-h1 text-white">Sign up</h1>
     <p class="heading-2">Choose your plan</p>
     <span class="uppercase text-xs p-1">Step 2 of 2 </span>
     <div
-      class="flex justify-between items-center border-green border-2 rounded-xl"
+      class="flex justify-between items-center border-[#12b488] border-2 rounded-xl"
     >
       <span
         class="w-1/2 text-center cursor-pointer leading-7 py-2 tracking-wider"
+        :class="[
+          planIndex === 1 && '!bg-[#12b488]  rounded-tl-3xl rounded-bl-3xl',
+        ]"
         @click="choosePlan('basic')"
         >Basic</span
       >
-      |
+
       <span
         class="w-1/2 text-center cursor-pointer leading-7 py-2 tracking-wider"
+        :class="[
+          planIndex === 2 && '!bg-[#12b488]  rounded-tr-3xl rounded-br-3xl',
+        ]"
         @click="choosePlan('geek')"
         >Geek</span
       >
@@ -44,7 +50,9 @@
       </div>
     </div>
     <div class="">
-      <button class="custom-btn--lg mt-8">Proceed</button>
+      <v-btn class="w-full !h-[50px] !bg-[#12b488] px-3 py-4 !text-white">
+        <span>Proceed </span>
+      </v-btn>
     </div>
   </div>
 </template>

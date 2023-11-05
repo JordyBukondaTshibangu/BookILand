@@ -16,7 +16,7 @@
           label="Password"
         ></v-text-field>
       </div>
-      <v-btn class="!bg-[#12b488] !text-white mt-8">Sign In</v-btn>
+      <v-btn class="!bg-[#12b488] !text-white mt-8 !h-[45px]">Sign In</v-btn>
       <p class="text-sm mt-2">
         New to BookILand ?
         <nuxt-link to="/register" class="underline text-sm"
