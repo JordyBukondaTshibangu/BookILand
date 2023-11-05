@@ -32,7 +32,7 @@
         <nuxt-link to="/about-us">About Us</nuxt-link>
       </li>
     </ul>
-    <p class="paragrap mt-10">&#169 2023 - BookILand, Inc</p>
+    <p class="paragrap mt-10"> &#169 2023 - BookILand, Inc</p>
     </section>
   </footer>
 </template>

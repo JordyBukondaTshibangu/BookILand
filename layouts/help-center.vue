@@ -5,11 +5,19 @@
         <nuxt-link to="/" class="text-7xl font-bold p-5">B</nuxt-link>
       </div>
       <div class="flex gap-2 -mt-2">
-        <nuxt-link to="/register" class="custom-btn--md text-xs"
-          >Join BookILand
+        <nuxt-link to="/register">
+          <v-btn
+            class="!w-[160px] !h-[48px] !flex !items-center !justify-center !bg-[#12b488] px-3 py-4 !text-white"
+          >
+            Join BookILand
+          </v-btn>
         </nuxt-link>
-        <nuxt-link to="/login" class="custom-btn--small text-xs"
-          >Sign In
+        <nuxt-link to="/login">
+          <v-btn
+            class="!w-[160px] !h-[48px] !flex !items-center !justify-center !bg-[#12b488] px-3 py-4 !text-white"
+          >
+            Sign In
+          </v-btn>
         </nuxt-link>
       </div>
     </nav>

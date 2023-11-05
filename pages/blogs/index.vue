@@ -1,9 +1,9 @@
 <template>
-  <section class="mt-20">
-    <h1 class="text-white text-3xl">This is the Future blog page</h1>
-  </section>
+  <ContainerBlog></ContainerBlog>
 </template>
 
-<script setup></script>
-
-<style lang="scss" scoped></style>
+<script setup>
+definePageMeta({
+  layout: "help-center",
+});
+</script>

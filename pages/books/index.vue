@@ -73,7 +73,6 @@
 
 <script setup>
 import bookList from "../../data";
-import { ref } from "vue";
 
 definePageMeta({
   layout: "book",

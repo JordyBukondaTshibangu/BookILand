@@ -38,10 +38,8 @@ let navigationBar = ref(null);
 let toggleClass = ref("bg-transparent");
 
 onMounted(() => {
-  console.log(navigationBar);
   window.onscroll = function () {
     if (navigationBar.scrollTop >= 600) {
-      console.log("first");
       toggleClass.value = "bg-transparent";
     } else {
       toggleClass.value = "bg-black shadow-sm";
